@@ -1,7 +1,36 @@
 .header_class {
   height: 100px; 
   width: 100%; 
+  /* background: black;  */
+  background: rgb(10, 2, 51); 
+}
+
+.right_nav_items {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-evenly; 
+  color: white; 
+  width: 40%; 
+  margin-left: 60%; 
+  height: 80px;
+  /* margin-top: 10px; 
+  margin-bottom: 10px;  */
   background: black; 
+}
+
+.right_nav_items > ul {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-evenly; 
+  list-style: none; 
+}
+
+.right_nav_items > ul > li {
+  margin: auto; 
+  margin-left: 10px; 
+  font-family: 'Courier New', Courier, monospace; 
+  color: rgb(147, 238, 185); 
+  font-weight: bold; 
 }
 
 .intro_container > img {
@@ -14,11 +43,11 @@
 .intro_container > p {
   height: 30px;
   width: 100%;
-  color: white;
+  color: rgb(93, 173, 238);
   text-align: center; 
   margin: auto; 
   font-family: 'Courier New', Courier, monospace; 
-  font-size: 48px; 
+  font-size: 28px; 
   font-weight: bold; 
 }
 
@@ -28,6 +57,7 @@
   background: rgb(6, 6, 88); 
   display: flex; 
   flex-direction: column; 
+  background: url('Images/MainPageBackground.png')
 }
 
 .first_tabs {

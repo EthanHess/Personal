@@ -26,15 +26,22 @@ class App extends Component {
     return (
       <div className="App">
         <div className="header_class">
-        
+            <div className="right_nav_items">
+              <ul>
+                <li>About</li>
+                <li>Games</li>
+                <li>Acting/Modeling</li>
+                <li>Books</li>
+              </ul>
+            </div>
         </div>
         <main className="main_body">
 
           <div className="intro_container">
             <img src={profile} alt=""/>
             <p>Ethan Hess</p>
-            <p>Software Developer in San Francisco, CA</p>
-            <p>(But also traveller of the world)</p>
+            <p>Software Developer (iOS and Web) in San Francisco, CA</p>
+            <p>Also traveller of the world, novelist, game designer, actor, model and some other things</p>
           </div>
 
           <div className="ios_work_container">
@@ -61,7 +68,7 @@ class App extends Component {
           </div>
 
           <div className="ios_personal_container">
-            <p>iOS Personal Work</p>
+            <p>iOS Personal Work $~ For Fun</p>
           </div>
           <div className="second_tabs">
             <div className="container_first_personal_one">
