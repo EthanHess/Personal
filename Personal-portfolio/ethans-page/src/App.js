@@ -36,9 +36,16 @@ class App extends Component {
             </div>
         </div>
         <main className="main_body">
-
           <div className="intro_container">
-            <img src={profile} alt=""/>
+            <div className="flip_container">
+              <div className="front">
+                <img src={profile} alt=""/>
+              </div>
+              <div className="back">
+                <button>LinkedIn</button>
+                <button>Instagram</button>
+              </div>
+            </div>
             <p>Ethan Hess</p>
             <p>Software Developer (iOS and Web) in San Francisco, CA</p>
             <p>Also traveller of the world, novelist, game designer, actor, model and some other things</p>
