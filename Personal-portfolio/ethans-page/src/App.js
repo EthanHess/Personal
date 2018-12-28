@@ -68,7 +68,7 @@ class App extends Component {
           </div>
 
           <div className="ios_personal_container">
-            <p>iOS Personal Work $~ For Fun</p>
+            <p>iOS Personal Work ~$ For Fun</p>
           </div>
           <div className="second_tabs">
             <div className="container_first_personal_one">
@@ -106,7 +106,21 @@ class App extends Component {
               <p>Grammin</p>
             </div>
           </div>
-          
+          <div className="web_personal_container">
+            <p>Web Personal Work ~$ For Fun</p>
+          </div>
+          <div className="container_third_personal_one">
+              {/* <img src={Catmology} alt=""></img> */}
+              <p>This Website</p>
+            </div>
+            <div className="container_third_personal_two">
+              {/* <img src={TeacherTools} alt=""></img> */}
+              <p>Spacegram</p>
+            </div>
+            <div className="container_third_personal_three">
+              {/* <img src={Quizzap} alt=""></img> */}
+              <p>Code Planet</p>
+            </div>
         </main>
         {/* <div className="footer">
           
