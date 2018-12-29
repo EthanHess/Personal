@@ -3,6 +3,7 @@
   width: 100%; 
   /* background: black;  */
   background: rgb(10, 2, 51); 
+  padding-top: 10px; 
 }
 
 .right_nav_items {
@@ -10,12 +11,14 @@
   flex-direction: row; 
   justify-content: space-evenly; 
   color: white; 
-  width: 40%; 
+  width: 35%;  
   margin-left: 60%; 
   height: 80px;
   /* margin-top: 10px; 
   margin-bottom: 10px;  */
   background: black; 
+  box-shadow: 5px 5px 5px 5px rgb(127, 189, 214);
+  border-radius: 5px; 
 }
 
 .right_nav_items > ul {
@@ -23,6 +26,7 @@
   flex-direction: row; 
   justify-content: space-evenly; 
   list-style: none; 
+  margin: auto; 
 }
 
 .right_nav_items > ul > li {
@@ -124,6 +128,7 @@
   background: rgb(37, 35, 180); 
   display: flex;
   flex-direction: row; 
+  background: url('Images/starsTwo.jpg'); 
   /* justify-content: space-evenly; 
   margin: auto;  */
 }
@@ -134,6 +139,7 @@
   background: rgb(26, 24, 112); 
   display: flex;
   flex-direction: row; 
+  background: url('Images/starsOne.jpg'); 
 }
 
 .third_tabs {
@@ -142,15 +148,16 @@
   background: rgb(39, 38, 114);
   display: flex;
   flex-direction: row;  
+  background: url('Images/starsOne.jpg'); 
 }
 
-.ios_work_container, .ios_personal_container {
+.ios_work_container, .ios_personal_container, .web_personal_container {
   display: flex; 
   flex-direction: column; 
   background: rgb(7, 2, 34); 
 }
 
-.ios_work_container > p, .ios_personal_container > p {
+.ios_work_container > p, .ios_personal_container > p, .web_personal_container > p {
   text-align: center; 
   color: white; 
   font-family: 'Courier New', Courier, monospace; 
