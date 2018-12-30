@@ -1,4 +1,7 @@
 .header_class {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-evenly;
   height: 100px; 
   width: 100%; 
   /* background: black;  */
@@ -6,13 +9,40 @@
   padding-top: 10px; 
 }
 
+.type_header_top {
+  color: rgb(132, 140, 250); 
+  text-align: center; 
+  font-size: 36px;     
+  margin-top: 25px; 
+  font-family: 'Courier New', Courier, monospace; 
+  font-weight: bold; 
+}
+
+.left_nav_items {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-evenly;
+  margin-left: 5%; 
+  width: 15%; 
+  height: 80px;
+  color: white; 
+  background: black; 
+  box-shadow: 5px 5px 5px 5px rgb(127, 189, 214);
+  border-radius: 5px; 
+}
+
+.left_nav_items > ul > li > img {
+  max-width: 60px;
+  max-height: 60px; 
+}
+
 .right_nav_items {
   display: flex; 
   flex-direction: row; 
   justify-content: space-evenly; 
   color: white; 
-  width: 35%;  
-  margin-left: 60%; 
+  width: 40%;  
+  margin-left: 30%; 
   height: 80px;
   /* margin-top: 10px; 
   margin-bottom: 10px;  */
@@ -21,7 +51,7 @@
   border-radius: 5px; 
 }
 
-.right_nav_items > ul {
+.right_nav_items > ul, .left_nav_items > ul {
   display: flex; 
   flex-direction: row; 
   justify-content: space-evenly; 
@@ -35,6 +65,11 @@
   font-family: 'Courier New', Courier, monospace; 
   color: rgb(147, 238, 185); 
   font-weight: bold; 
+}
+
+.right_nav_items > ul > li:hover {
+  color: rgb(59, 59, 233); 
+  cursor: pointer;
 }
 
 .flip_container {
@@ -151,6 +186,16 @@
   background: url('Images/starsOne.jpg'); 
 }
 
+.web_parent_container {
+  height: 70vh;
+  width: 100vw; 
+  background: rgb(39, 38, 114);
+  display: flex;
+  flex-direction: row;  
+  background: url('Images/starsOne.jpg'); 
+  color: white; 
+}
+
 .ios_work_container, .ios_personal_container, .web_personal_container {
   display: flex; 
   flex-direction: column; 
@@ -233,6 +278,18 @@
 }
 
 .container_second_personal_one, .container_second_personal_two, .container_second_personal_three, .container_second_personal_four  {
+  width: 200px; 
+  height: 80%; 
+  display: flex; 
+  flex-direction: column; 
+  margin: auto;
+  margin-top: 5%; 
+  margin-bottom: 5%; 
+  box-shadow: 5px 5px 5px 5px rgb(193, 190, 228);
+  border-radius: 10px; 
+}
+
+.web_container_third_personal_one, .web_container_third_personal_two, .web_container_third_personal_three {
   width: 200px; 
   height: 80%; 
   display: flex; 

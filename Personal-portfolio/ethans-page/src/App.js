@@ -19,6 +19,10 @@ import TeacherTools from './Images/TeacherTools.png';
 import GramminIcon from './Images/GramminIcon.png'; 
 import Catmology from './Images/Catmology.png'; 
 
+import theUser from './Images/female_user.png'; 
+
+import Typing from 'react-typing-animation';
+
 //Add web + video game portfolio in this route, then add other routes for commercials, books etc. 
 
 class App extends Component {
@@ -26,6 +30,12 @@ class App extends Component {
     return (
       <div className="App">
         <div className="header_class">
+            <div className="left_nav_items">
+              <ul>
+                <li><img src={theUser}/></li>
+                <li><button>Login</button></li>
+              </ul>
+            </div>
             <div className="right_nav_items">
               <ul>
                 <li>About</li>
@@ -46,7 +56,7 @@ class App extends Component {
                 <button>Instagram</button>
               </div>
             </div>
-            <p>Ethan Hess</p>
+            <Typing className="type_header_top"> Ethan Hess </Typing>
             <p>Software Developer (iOS and Web) in San Francisco, CA</p>
             <p>Also traveller of the world, novelist, game designer, actor, model and some other things</p>
           </div>
@@ -116,18 +126,20 @@ class App extends Component {
           <div className="web_personal_container">
             <p>Web Personal Work ~$ For Fun</p>
           </div>
-          <div className="container_third_personal_one">
+          <div className="web_parent_container">
+            <div className="web_container_third_personal_one">
               {/* <img src={Catmology} alt=""></img> */}
               <p>This Website</p>
             </div>
-            <div className="container_third_personal_two">
+            <div className="web_container_third_personal_two">
               {/* <img src={TeacherTools} alt=""></img> */}
               <p>Spacegram</p>
             </div>
-            <div className="container_third_personal_three">
+            <div className="web_container_third_personal_three">
               {/* <img src={Quizzap} alt=""></img> */}
               <p>Code Planet</p>
             </div>
+          </div> 
         </main>
         {/* <div className="footer">
           
