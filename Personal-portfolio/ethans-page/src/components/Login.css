@@ -1,0 +1,9 @@
+.login_parent {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(6, 6, 88); 
+    display: flex; 
+    flex-direction: column; 
+    background: url('..//Images/matrix_city.jpg'); 
+    background-size: cover; 
+}

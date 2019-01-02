@@ -1,0 +1,253 @@
+.flip_container {
+    width: 40%; 
+    height: 40%; 
+    margin: auto; 
+    border-radius: 10px; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: bold; 
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    perspective: 1000px; 
+    box-shadow: 5px 5px 5px 5px rgb(127, 189, 214);
+  }
+  
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+  /* for firefox 31 */
+    transform: rotateY(0deg);
+  }
+  
+  .front > img {
+    max-width: 100%; 
+    max-height: 100%; 
+    margin: auto; 
+    box-shadow: 5px 5px 5px 5px rgb(193, 190, 228);
+  }
+  
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+    overflow: hidden;
+  }
+  
+  .front, .back {
+    backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+    left: 0;
+    border-radius: 10px; 
+    width: 100%; 
+    height: 100%;
+    display: flex; 
+    flex-direction: column; 
+  }
+  
+  .flip_container:hover {
+    transform: rotateY(180deg); 
+    background: transparent; 
+  }
+  
+  .back > button {
+    background: black; 
+    color: white; 
+    margin: auto; 
+    width: 50%; 
+    height: 50px;
+    border-radius: 10px; 
+  }
+  
+  .back > button:hover {
+    background: rgb(70, 70, 206); 
+  }
+  
+  .intro_container > p {
+    height: 30px;
+    width: 100%;
+    color: rgb(93, 173, 238);
+    text-align: center; 
+    margin: auto; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 28px; 
+    font-weight: bold; 
+  }
+  
+  .intro_container {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(6, 6, 88); 
+    display: flex; 
+    flex-direction: column; 
+    background: url('..//Images/earthsunrise.jpg'); 
+    background-size: cover; 
+  }
+  
+  .first_tabs {
+    height: 100vh;
+    width: 100vw; 
+    background: rgb(37, 35, 180); 
+    display: flex;
+    flex-direction: row; 
+    background: url('..//Images/starsTwo.jpg'); 
+    /* justify-content: space-evenly; 
+    margin: auto;  */
+  }
+  
+  .second_tabs {
+    height: 100vh;
+    width: 100vw; 
+    background: rgb(26, 24, 112); 
+    display: flex;
+    flex-direction: row; 
+    background: url('..//Images/starsOne.jpg'); 
+  }
+  
+  .third_tabs {
+    height: 100vh;
+    width: 100vw; 
+    background: rgb(39, 38, 114);
+    display: flex;
+    flex-direction: row;  
+    background: url('..//Images/starsOne.jpg'); 
+  }
+  
+  .web_parent_container {
+    height: 70vh;
+    width: 100vw; 
+    background: rgb(39, 38, 114);
+    display: flex;
+    flex-direction: row;  
+    background: url('..//Images/starsOne.jpg'); 
+    color: white; 
+  }
+  
+  .ios_work_container, .ios_personal_container, .web_personal_container {
+    display: flex; 
+    flex-direction: column; 
+    background: rgb(7, 2, 34); 
+  }
+  
+  .ios_work_container > p, .ios_personal_container > p, .web_personal_container > p {
+    text-align: center; 
+    color: white; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: bold; 
+    font-size: 36px; 
+  }
+  
+  .first_tabs, .second_tabs, .third_tabs {
+    width: 100%; 
+    height: 400px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly; 
+  }
+  
+  .container_first_one, .container_first_two, .container_first_three, .container_first_four, {
+    width: 200px; 
+    height: 250px; 
+    display: flex; 
+    flex-direction: column; 
+    margin: auto;
+    margin-top: 50px; 
+    margin-bottom: 10px; 
+    box-shadow: 5px 5px 5px 5px rgb(193, 190, 228);
+    border-radius: 10px; 
+  }
+  
+  .container_first_one > p, .container_first_two > p, .container_first_three > p, .container_first_four > p {
+    color: white; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 28px; 
+    font-weight: bold; 
+    text-align: center; 
+    width: 200px; 
+  }
+  
+  .container_first_one > img, .container_first_two > img, .container_first_three > img, .container_first_four > img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 10px; 
+    margin-top: 50px; 
+  }
+  
+  /* .container_second_one > img {
+    width: 20%; 
+    height: 20%; 
+  } */
+  
+  .container_first_personal_one > img, .container_first_personal_two > img, .container_first_personal_three > img, .container_first_personal_four > img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 10px; 
+    margin-top: 0px; 
+  }
+  
+  .container_second_personal_one > img, .container_second_personal_two > img, .container_second_personal_three > img, .container_second_personal_four > img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 10px; 
+    margin-top: 0px; 
+  }
+  
+  .container_first_personal_one, .container_first_personal_two, .container_first_personal_three, .container_first_personal_four {
+    width: 200px; 
+    height: 80%; 
+    display: flex; 
+    flex-direction: column; 
+    margin: auto;
+    margin-top: 5%; 
+    margin-bottom: 5%; 
+    box-shadow: 5px 5px 5px 5px rgb(193, 190, 228);
+    border-radius: 10px; 
+  }
+  
+  .container_second_personal_one, .container_second_personal_two, .container_second_personal_three, .container_second_personal_four  {
+    width: 200px; 
+    height: 80%; 
+    display: flex; 
+    flex-direction: column; 
+    margin: auto;
+    margin-top: 5%; 
+    margin-bottom: 5%; 
+    box-shadow: 5px 5px 5px 5px rgb(193, 190, 228);
+    border-radius: 10px; 
+  }
+  
+  .web_container_third_personal_one, .web_container_third_personal_two, .web_container_third_personal_three {
+    width: 200px; 
+    height: 80%; 
+    display: flex; 
+    flex-direction: column; 
+    margin: auto;
+    margin-top: 5%; 
+    margin-bottom: 5%; 
+    box-shadow: 5px 5px 5px 5px rgb(193, 190, 228);
+    border-radius: 10px; 
+  }
+  
+  .container_first_personal_one > img, .container_first_personal_two > img, .container_first_personal_three > img, .container_first_personal_four > img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 10px; 
+    margin-top: 0px; 
+  }
+  
+  .container_first_personal_one > p, .container_first_personal_two > p, .container_first_personal_three > p, .container_first_personal_four > p {
+    color: white; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 28px; 
+    font-weight: bold; 
+    text-align: center; 
+    width: 200px; 
+  }
+  
+  .container_second_personal_one > p, .container_second_personal_two > p, .container_second_personal_three > p, .container_second_personal_four > p {
+    color: white; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 28px; 
+    font-weight: bold; 
+    text-align: center; 
+    width: 200px; 
+  }

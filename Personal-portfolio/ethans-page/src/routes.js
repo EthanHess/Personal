@@ -1,9 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import App from './App.js'; 
+//import App from './App.js'; 
 
 //Components 
+import Home from './components/Home.js'; 
 import Acting from './components/Acting.js'; 
 import Books from './components/Books.js'; 
 import Games from './components/Games.js'; 
@@ -12,7 +13,7 @@ import Payments from './components/Payments.js';
 
 export default (
     <Switch>
-        <Route component={App} exactPath="/"/>
+        <Route component={Home} exact path="/"/>
         <Route component={Login} path="/login"/>
         <Route component={Acting} path="/acting"/>
         <Route component={Games} path="/games"/>
