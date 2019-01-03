@@ -18,11 +18,6 @@ class App extends Component {
     }
   }
 
-  //Just use LINK for the rest
-  toActingAndModeling = () => {
-    this.props.history.push('/acting')
-  }
-
   //Move this to own component
 
   render() {
@@ -37,10 +32,10 @@ class App extends Component {
             </div>
             <div className="right_nav_items">
               <ul>
-                <li>About</li>
-                <li>Games</li>
-                <li>Acting/Modeling</li>
-                <li>Books</li>
+                <li><button>About</button></li>
+                <li><button>Games</button></li>
+                <li><button onClick={()=> this.props.history.push('/acting')}>Acting / Modeling</button></li>
+                <li><button>Books</button></li>
               </ul>
             </div>
         </div>
