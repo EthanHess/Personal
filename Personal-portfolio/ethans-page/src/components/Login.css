@@ -1,6 +1,6 @@
-.login_parent {
-    height: 100%;
-    width: 100%;
+.login_parent { 
+    height: 100vw;
+    width: 100vh;
     background: url('..//Images/matrix_city.jpg'); 
     background-size: cover; 
 }
@@ -18,13 +18,13 @@
     box-shadow: 5px 5px 5px 5px rgb(127, 189, 214);
 }
 
-#input_container {
+.input_container {
     display: flex; 
     flex-direction: column; 
     justify-content: space-evenly; 
 }
 
-#button_container {
+.button_container {
     display: flex; 
     flex-direction: column; 
     justify-content: space-evenly; 

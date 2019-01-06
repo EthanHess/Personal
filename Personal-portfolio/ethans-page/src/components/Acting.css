@@ -1,10 +1,12 @@
 #acting_parent {
-    height: 100%; 
-    width: 100%; 
-    background: rgb(10, 1, 1); 
+    height: 150vh; 
+    width: 100vw; 
+    /* background: rgb(10, 1, 1);  */
     display: flex; 
     flex-direction: column; 
     justify-content: space-evenly; 
+    background: url('..//Images/showbiz.jpg'); 
+    background-size: cover; 
 }
 
 #acting_container {

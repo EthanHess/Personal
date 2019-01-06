@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
+import './Login.css'; 
 
 import theUser from '..//Images/female_user.png'; 
 
@@ -56,12 +57,12 @@ export default class Login extends Component {
             <div className="login_parent">
                 <div className="auth_oasis">
                     <img src={theUser}></img>
-                    <div id="input_container">
+                    <div className="input_container">
                         <input onChange={(e) => this.monitorTextChangeUsername(e)}></input>
                         <input onChange={(e) => this.monitorTextChangeEmail(e)}></input>
                         <input onChange={(e) => this.monitorTextChangePassword(e)}></input>
                     </div>
-                    <div id="button_container">
+                    <div className="button_container">
                         <button onClick={() => this.handleLogin }>Login</button>
                         <button onClick={() => this.handleLogin }>Sign Up</button>
                     </div>
