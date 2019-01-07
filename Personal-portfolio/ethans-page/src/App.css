@@ -36,6 +36,13 @@
   max-height: 60px; 
 }
 
+.header_class > img {
+  max-width: 70px;
+  max-height: 70px; 
+  margin: auto; 
+  margin-top: 15px; 
+}
+
 .right_nav_items {
   display: flex; 
   flex-direction: row; 

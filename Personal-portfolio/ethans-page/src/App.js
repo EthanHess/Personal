@@ -6,6 +6,7 @@ import routes from './routes.js';
 //Icons (maybe group in divs by four?)
 
 import theUser from './Images/female_user.png'; 
+import homeImage from './Images/blue_circle.png';
 
 
 //Add web + video game portfolio in this route, then add other routes for commercials, books etc. 
@@ -24,10 +25,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="header_class">
-            <div className="left_nav_items">
+            <img onClick={() => this.props.history.push('/')} src={homeImage}/>
+            <div className="left_nav_items">  
               <ul>
                 <li><img src={ theUser }/></li>
-                <li><button onClick={() => this.props.history.push('/login') }>Login</button></li>
+                <li><button onClick={() => this.props.history.push('/login')}>Login</button></li>
               </ul>
             </div>
             <div className="right_nav_items">
