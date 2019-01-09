@@ -31,9 +31,30 @@
   border-radius: 5px; 
 }
 
+/* //TODO change margin */
 .left_nav_items > ul > li > img {
   max-width: 60px;
   max-height: 60px; 
+  margin-left: -50%;  
+}
+
+.left_nav_items > ul > li > button {
+  background: rgb(20, 2, 61); 
+  color: white; 
+  border-radius: 10px; 
+  border-color: aliceblue; 
+  margin-top: 10px; 
+  box-shadow: 1px 1px 1px 1px rgb(127, 189, 214);
+  width: 80px; 
+  height: 40px;
+  font-family: 'Courier New', Courier, monospace; 
+  font-weight: bold; 
+  font-size: 12px; 
+}
+
+.left_nav_items > ul > li > button:hover {
+  background: rgb(64, 47, 224); 
+  cursor: pointer;
 }
 
 .header_class > img {
@@ -41,6 +62,9 @@
   max-height: 70px; 
   margin: auto; 
   margin-top: 15px; 
+  box-shadow: 2px 2px 2px 2px rgb(127, 189, 214);
+  border-radius: 35px; 
+  cursor: pointer;
 }
 
 .right_nav_items {
@@ -74,8 +98,21 @@
   font-weight: bold; 
 }
 
-.right_nav_items > ul > li:hover {
-  color: rgb(59, 59, 233); 
+.right_nav_items > ul > li > button {
+  font-family: 'Courier New', Courier, monospace; 
+  font-size: 12px; 
+  font-weight: bold; 
+  background: rgb(20, 2, 61); 
+  color: white; 
+  border-radius: 10px; 
+  border-color: aliceblue; 
+  box-shadow: 1px 1px 1px 1px rgb(127, 189, 214);
+  width: 80px; 
+  height: 40px;
+}
+
+.right_nav_items > ul > li > button:hover {
+  background: rgb(64, 47, 224); 
   cursor: pointer;
 }
 
@@ -137,6 +174,11 @@
   width: 50%; 
   height: 50px;
   border-radius: 10px; 
+  box-shadow: 2px 2px 2px 2px rgb(127, 189, 214);
+  font-family: 'Courier New', Courier, monospace; 
+  font-weight: bold; 
+  font-size: 12px; 
+  cursor: pointer;
 }
 
 .back > button:hover {

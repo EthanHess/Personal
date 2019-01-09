@@ -114,15 +114,15 @@ export default class Home extends Component {
           <div className="web_parent_container">
             <div className="web_container_third_personal_one">
               {/* <img src={Catmology} alt=""></img> */}
-              <p>This Website</p>
+              <p>This Website, a react app, which I coded - No link needed obviously ;) -</p>
             </div>
             <div className="web_container_third_personal_two">
               {/* <img src={TeacherTools} alt=""></img> */}
-              <p>Spacegram</p>
+              <p>Code Planet</p>
             </div>
             <div className="web_container_third_personal_three">
               {/* <img src={Quizzap} alt=""></img> */}
-              <p>Code Planet</p>
+              <p>Spacegram</p>
             </div>
             </div>
             </div>
