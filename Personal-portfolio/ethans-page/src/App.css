@@ -72,8 +72,9 @@
   flex-direction: row; 
   justify-content: space-evenly; 
   color: white; 
-  width: 40%;  
+  width: 35%;  
   margin-left: 30%; 
+  margin-right: 5%; 
   height: 80px;
   /* margin-top: 10px; 
   margin-bottom: 10px;  */
@@ -112,6 +113,26 @@
 }
 
 .right_nav_items > ul > li > button:hover {
+  background: rgb(64, 47, 224); 
+  cursor: pointer;
+}
+
+/* Can remove above, new button */
+
+.right_nav_items > button {
+  width: 50%; 
+  height: 50%;
+  margin: auto; 
+  border-radius: 5px; 
+  font-family: 'Courier New', Courier, monospace; 
+  font-weight: bold; 
+  background: rgb(20, 2, 61); 
+  color: white; 
+  border-color: white; 
+  box-shadow: 1px 1px 1px 1px rgb(127, 189, 214);
+}
+
+.right_nav_items > button:hover {
   background: rgb(64, 47, 224); 
   cursor: pointer;
 }

@@ -15,12 +15,15 @@ class App extends Component {
   constructor() { //TD add props
     super()
     this.state = {
-
+      isToggled: false
     }
   }
 
-  //Move this to own component
+  toggleMenuHandler = () => {
+    this.setState({ isToggled: !this.state.isToggled })
+  }
 
+  //Move this to own component
   render() {
     return (
       <div className="App">
@@ -33,12 +36,16 @@ class App extends Component {
               </ul>
             </div>
             <div className="right_nav_items">
-              <ul>
+              <button onClick={() => this.toggleMenuHandler}>~$ Explore</button>
+              { this.state.isToggled === true ? <div>
+                
+              </div> : <div></div>}
+              {/* <ul>
                 <li><button>About</button></li>
                 <li><button>Games</button></li>
                 <li><button onClick={()=> this.props.history.push('/acting')}>Acting / Modeling</button></li>
                 <li><button>Books</button></li>
-              </ul>
+              </ul> */}
             </div>
         </div>
         <main className="main_body">

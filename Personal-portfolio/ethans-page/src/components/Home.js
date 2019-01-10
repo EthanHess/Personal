@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 
 import Ilmatic from '..//Images/Ilmatic.png'; 
-import Hipervision from '..//Images/Hipervision.png'; 
+import Hipervision from '..//Images/Hipervision_new.png'; 
 import ClokIcon from '..//Images/ClokIcon.png'; 
 import Weedherb from '..//Images/Weedherb.png'; 
 
