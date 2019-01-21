@@ -31,6 +31,40 @@
   border-radius: 5px; 
 }
 
+/* TOGGLE */
+.toggle_container {
+  width: 30%; 
+  height: 50%;
+  margin-top: 80px; 
+  background: rgb(11, 40, 94); 
+  position: absolute;
+  z-index: 3;
+  border-radius: 5px;  
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-evenly; 
+  box-shadow: 2px 2px 2px 2px rgb(127, 189, 214);
+}
+
+.toggle_container > button {
+  background:  #1A202B; 
+  border-color: #1896DA; 
+  color: #1896DA; 
+  font-size: 24px; 
+  font-family: 'Courier New', Courier, monospace; 
+  border-radius: 5px; 
+  width: 80%; 
+  margin-left: 10%; 
+  margin-top: 15px; 
+  box-shadow: 2px 2px 2px 2px rgb(127, 189, 214);
+}
+
+.toggle_container > button:hover {
+  background: #1896DA; 
+  cursor: pointer;
+  color: white; 
+}
+
 /* //TODO change margin */
 .left_nav_items > ul > li > img {
   max-width: 60px;

@@ -21,6 +21,7 @@ class App extends Component {
 
   toggleMenuHandler = () => {
     this.setState({ isToggled: !this.state.isToggled })
+    console.log('this.state.isToggled', this.state.isToggled)
   }
 
   //Move this to own component
@@ -36,11 +37,17 @@ class App extends Component {
               </ul>
             </div>
             <div className="right_nav_items">
-              <button onClick={() => this.toggleMenuHandler}>~$ Explore</button>
-              { this.state.isToggled === true ? <div>
-                
-              </div> : <div></div>}
+              <button onClick={() => this.toggleMenuHandler()}>~$ Explore</button>
+              { this.state.isToggled === true ? <div className="toggle_container">
+                <button>About</button>
+                <button onClick={()=> this.props.history.push('/acting')}>Acting / Modeling</button>
+                <button>Books</button>
+                <button>Games</button>
+              </div> : <div></div> }
               {/* <ul>
+
+                //TODO add client portal to list, if user is logged in
+
                 <li><button>About</button></li>
                 <li><button>Games</button></li>
                 <li><button onClick={()=> this.props.history.push('/acting')}>Acting / Modeling</button></li>
