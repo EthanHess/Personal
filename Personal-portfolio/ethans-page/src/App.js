@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'; 
 import './App.css';
 import routes from './routes.js'; 
+import { Animate, AnimateKeyframes, AnimateGroup } from 'react-simple-animate';
 
 //Icons (maybe group in divs by four?)
 
@@ -26,6 +27,12 @@ class App extends Component {
 
   //Move this to own component
   render() {
+
+    const props = {
+      startStyle: { opacity: 0 },
+      endStyle: { opacity: 1 }
+    }
+
     return (
       <div className="App">
         <div className="header_class">
@@ -38,12 +45,12 @@ class App extends Component {
             </div>
             <div className="right_nav_items">
               <button onClick={() => this.toggleMenuHandler()}>~$ Explore</button>
-              { this.state.isToggled === true ? <div className="toggle_container">
+              { this.state.isToggled === true ? <Animate play {...props} className="toggle_container">
                 <button>About</button>
                 <button onClick={()=> this.props.history.push('/acting')}>Acting / Modeling</button>
                 <button>Books</button>
                 <button>Games</button>
-              </div> : <div></div> }
+              </Animate> : <div></div> }
               {/* <ul>
 
                 //TODO add client portal to list, if user is logged in
