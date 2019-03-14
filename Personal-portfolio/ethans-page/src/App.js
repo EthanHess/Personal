@@ -49,7 +49,7 @@ class App extends Component {
                 <button>About</button>
                 <button onClick={()=> this.props.history.push('/acting')}>Acting / Modeling</button>
                 <button>Books</button>
-                <button>Games</button>
+                <button onClick={()=> this.props.history.push('/games')}>Games</button>
               </Animate> : <div></div> }
               {/* <ul>
 
