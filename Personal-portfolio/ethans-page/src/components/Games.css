@@ -2,11 +2,23 @@
 @import "~slick-carousel/slick/slick-theme.css";
 /* @import '../../scss/variables'; */
 
+#game_parent {
+    height: 150%;
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    margin: auto; 
+    background: black; 
+}
+
 .animation_container_two {
     width: 80%; 
-    height: 70%;
+    height: 50%;
     margin-top: 50px;
     margin-left: 10%; 
+    margin-bottom: 0px; 
+    margin: auto; 
     background: #0E131B;
     border-radius: 10px; 
     z-index: 10px;
@@ -50,7 +62,7 @@
     border-radius: 10px; 
 }
 
-.flip_container {
+.game_flip_container {
     width: 80%; 
     height: 80%; 
     margin-top: 10%; 

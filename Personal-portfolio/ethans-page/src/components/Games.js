@@ -6,11 +6,12 @@ import Slider from 'react-slick';
 import axios from 'axios'; 
 
 //Images
-import imageOne from '..//GameImages/gameOne_1'; 
-import imageTwo from '..//GameImages/gameOne_2'; 
-import imageThree from '..//GameImages/gameOne_3'; 
-import imageFour from '..//GameImages/gameOne_4'; 
-import imageFive from '..//GameImages/gameOne_5'; 
+import imageOne from '..//GameImages/gameOne_1.png'; 
+import imageTwo from '..//GameImages/gameOne_2.png'; 
+import imageThree from '..//GameImages/gameOne_3.png'; 
+import imageFour from '..//GameImages/gameOne_4.png'; 
+import imageFive from '..//GameImages/gameOne_5.png'; 
+
 
 export default class Games extends Component {
     constructor() {
@@ -54,7 +55,7 @@ export default class Games extends Component {
         const { imagesArray } = this.state
         const children = imagesArray.map((item, index) => {
             return <div className="scroll_child" key={index} onTouchStart="this.classList.toggle('hover');">
-                <div className="flip_container">
+                <div className="game_flip_container">
                     <div className="front">
                         <div className="top_scroll_container">
                             <img className="main_image" 
@@ -72,7 +73,7 @@ export default class Games extends Component {
 
         //Could use ID instead of class name if not going to reuse
         return (
-            <div>
+            <div id="game_parent">
                 <ThreeScene/> 
                 <div className="animation_container_two">
                     <Slider className="slick_slider" {...settings}>
