@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ThreeScene from './ThreeScene.js'; 
+import ThreeSceneRubiks from './ThreeSceneRubiks.js'
 import './Games.css'; 
 import Slider from 'react-slick';
 //TODO add TweenLite
@@ -74,12 +75,13 @@ export default class Games extends Component {
         //Could use ID instead of class name if not going to reuse
         return (
             <div id="game_parent">
-                <ThreeScene/> 
-                <div className="animation_container_two">
+                {/* <ThreeScene/>  */}
+                <ThreeSceneRubiks />
+                {/* <div className="animation_container_two">
                     <Slider className="slick_slider" {...settings}>
                         { children }
                     </Slider>
-                </div>
+                </div> */}
             </div>
         )
     }
