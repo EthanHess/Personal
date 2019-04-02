@@ -37,8 +37,10 @@ class Home extends Component {
                 <img src={profile} alt=""/>
               </div>
               <div className="back">
-                <button onClick={()=> this.props.history.push('www.google.com')}>LinkedIn</button>
-                <button onClick={()=> this.props.history.push('www.google.com')}>Instagram</button>
+                {/* <button onClick={()=> this.props.history.push('/www.google.com')}>LinkedIn</button>
+                <button onClick={()=> this.props.history.push('/www.google.com')}>Instagram</button> */}
+                <button onClick={()=> window.open("//www.linkedin.com/in/ethan-hess-91000851/", "_blank")}>LinkedIn</button>
+                <button onClick={()=> window.open("//www.instagram.com/eh8891/", "_blank")}>Instagram</button>
               </div>
             </div>
             <Typing className="type_header_top"> Ethan Hess </Typing>
