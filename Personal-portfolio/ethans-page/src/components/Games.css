@@ -3,18 +3,19 @@
 /* @import '../../scss/variables'; */
 
 #game_parent {
-    height: 150%;
+    height: 250%;
     width: 100%; 
     display: flex; 
     flex-direction: column; 
     /* justify-content: center;  */
+    margin-bottom: 0px; 
     margin: auto; 
     background: black; 
 }
 
 .rubiks_container {
     width: 100%; 
-    height: 50%;
+    height: 500px;
     margin: auto; 
     display: flex; 
     flex-direction: column; 
@@ -23,13 +24,13 @@
 
 .canvas {
     width: 100%;
-    height: 100%;
+    height: 500px;
     margin: auto; 
 }
 
 .canvas > canvas {
     width: 100%;
-    height: 100%;
+    height: 500px;
     margin: auto; 
 }
 
@@ -50,12 +51,14 @@
     margin-top: 10px; 
     height: 100%;
     background: #1A202B; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px rgb(127, 189, 214);
 }
 
 /* Scroll view --- MOVE TO OWN COMPONENT --- */ 
 
 .scroll_child {
-    height: 350px;
+    height: 600px;
     margin-top: 15px; 
     background: transparent; 
 }
@@ -98,4 +101,43 @@
     position: relative;
     perspective: 1000px; 
     box-shadow: 0 0 5px rgb(127, 189, 214);
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+    left: 0;
+    border-radius: 10px; 
+    width: 100%; 
+    height: 100%;
+    display: flex; 
+    flex-direction: column; 
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+    overflow: hidden;
+}
+
+.back {
+    margin: auto; 
+    width: 100%; 
+    height: 100%;
+    background: rgb(6, 79, 119); 
+}
+
+.main_image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
 }

@@ -18,10 +18,10 @@ import Catmology from '..//Images/Catmology.png';
 
 import profile from '..//Images/profile_pic.jpg'; 
 import { Link } from 'react-router-dom'; 
-
+import { withRouter } from 'react-router-dom';
 import Typing from 'react-typing-animation';
 
-export default class Home extends Component {
+class Home extends Component {
     constructor() {
         super()
         //TODO add props
@@ -37,8 +37,8 @@ export default class Home extends Component {
                 <img src={profile} alt=""/>
               </div>
               <div className="back">
-                <button>LinkedIn</button>
-                <button>Instagram</button>
+                <button onClick={()=> this.props.history.push('www.google.com')}>LinkedIn</button>
+                <button onClick={()=> this.props.history.push('www.google.com')}>Instagram</button>
               </div>
             </div>
             <Typing className="type_header_top"> Ethan Hess </Typing>
@@ -136,3 +136,5 @@ export default class Home extends Component {
         )
     }
 }
+
+export default withRouter(Home)

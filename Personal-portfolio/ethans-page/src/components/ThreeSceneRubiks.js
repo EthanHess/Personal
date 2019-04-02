@@ -20,7 +20,7 @@ class ThreeSceneRubiks extends Component {
 
         this.state = {
             width: window.innerWidth,
-            height: window.innerHeight,
+            height: 500,
             rubiksArray: [
                     Array(9).fill('O'), 
                     Array(9).fill('B'), 
@@ -64,9 +64,8 @@ class ThreeSceneRubiks extends Component {
         }
     }
 
-    //No need to bind because => :)
-
-
+        //No need to bind because => :)
+        setTimeout(this.makeItParty, 2000)
     }
 
     animate = () => {
@@ -93,7 +92,7 @@ class ThreeSceneRubiks extends Component {
             setTimeout(() => {this.makeItParty()}, 50);
           });
         }
-      }
+    }
 
     setCubePositions = () => {
 
@@ -116,7 +115,7 @@ class ThreeSceneRubiks extends Component {
         window.addEventListener('resize', this.updateWindowDimensions);
 
         const width = window.innerWidth; 
-        const height = window.innerWidth; 
+        const height = 500; 
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(
@@ -260,11 +259,56 @@ class ThreeSceneRubiks extends Component {
         });
     }
 
+    //Party funcs
+
+    makeItParty = () => {
+        //if (this.state.party === true) {
+          let colors = ['O', 'B', 'W', 'R', 'Y', 'G'];
+          let newState = [];
+          for (let x = 0; x < 6; x ++) {
+            let face = [];
+            for (let x = 0; x < 9; x ++) {
+              face.push(colors[Math.floor(Math.random()*colors.length)]);
+            }
+            newState.push(face);
+          }
+          this.setState({
+            rubiksArray: newState, 
+          }, () => {
+            this.handleRenderCubeColorPositions();
+            setTimeout(() => { this.makeItParty() }, 50);
+          });
+        //}
+      }
+
+    // UPDATES COLOUR OF COMPONENT CUBES USING CUBE DATA IN STATE
+    handleRenderCubeColorPositions() {
+        for (let cubeNum = 0; cubeNum < 27; cubeNum++) {
+            let aCubeMap = stateToCubesMapping[cubeNum];
+                for ( let i = 0, c = 0; i < this.cubeGeometries[cubeNum].faces.length; i += 2, c++ ) {
+                let hex;
+                if (!!aCubeMap[c]) {
+                let colorCode = this.state.rubiksArray[aCubeMap[c][0]][aCubeMap[c][1]];
+                hex = this.state.colorCodes[colorCode];
+            } else {
+                hex = '0x000000';
+        }
+            this.cubeGeometries[cubeNum].faces[ i ].color.setHex( hex );
+            this.cubeGeometries[cubeNum].faces[ i + 1 ].color.setHex( hex );
+            this.cubes[cubeNum].geometry.colorsNeedUpdate = true;
+      }
+    }
+        this.renderScene();
+    }
+
+    //End 
+
     render() {
         return (
             <div className="rubiks_container">
                 <div className = "canvas" ref={(mount) => { this.mount = mount }}>
-                    <TheCube width = {this.state.width * 0.7} height = {this.state.height} rerender = {this.state.rerender}/>
+                    {/* <TheCube width = { this.state.width * 0.7 } height = { this.state.height } rerender = { this.state.rerender }/> */}
+                    <TheCube width = { 500 } height = { 500 } rerender = { this.state.rerender }/> 
                 </div>
             </div>
         )

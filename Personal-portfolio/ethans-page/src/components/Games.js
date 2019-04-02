@@ -18,10 +18,9 @@ export default class Games extends Component {
     constructor() {
         super()
         this.state = {
-            imagesArray: []
+            imagesArray: [imageOne, imageTwo, imageThree, imageFour, imageFive], 
         }
 
-        this.setImages()
     }
 
     setImages = () => {
@@ -48,13 +47,14 @@ export default class Games extends Component {
             dots: true,
             infinite: true,
             speed: 500,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1
         }
 
         //To populate slider
         const { imagesArray } = this.state
         const children = imagesArray.map((item, index) => {
+            console.log('item + index', item, index)
             return <div className="scroll_child" key={index} onTouchStart="this.classList.toggle('hover');">
                 <div className="game_flip_container">
                     <div className="front">
@@ -72,16 +72,19 @@ export default class Games extends Component {
             </div>
         })
 
+        console.log("children", children)
+        console.log("images array", imagesArray)
+
         //Could use ID instead of class name if not going to reuse
         return (
             <div id="game_parent">
                 {/* <ThreeScene/>  */}
                 <ThreeSceneRubiks />
-                {/* <div className="animation_container_two">
+                <div className="animation_container_two">
                     <Slider className="slick_slider" {...settings}>
                         { children }
                     </Slider>
-                </div> */}
+                </div>
             </div>
         )
     }
