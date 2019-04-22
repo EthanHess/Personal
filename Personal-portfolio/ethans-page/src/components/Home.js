@@ -37,8 +37,6 @@ class Home extends Component {
                 <img src={profile} alt=""/>
               </div>
               <div className="back">
-                {/* <button onClick={()=> this.props.history.push('/www.google.com')}>LinkedIn</button>
-                <button onClick={()=> this.props.history.push('/www.google.com')}>Instagram</button> */}
                 <button onClick={()=> window.open("//www.linkedin.com/in/ethan-hess-91000851/", "_blank")}>LinkedIn</button>
                 <button onClick={()=> window.open("//www.instagram.com/eh8891/", "_blank")}>Instagram</button>
               </div>
@@ -116,15 +114,12 @@ class Home extends Component {
           <div className="web_parent_wrapper">
             <div className="web_parent_container">
               <div className="web_container_third_personal_one">
-                {/* <img src={Catmology} alt=""></img> */}
                 <p>This Website, a react app, which I coded - No link needed obviously ;) -</p>
               </div>
               <div className="web_container_third_personal_two">
-                {/* <img src={TeacherTools} alt=""></img> */}
                 <p>Code Planet</p>
               </div>
               <div className="web_container_third_personal_three">
-                {/* <img src={Quizzap} alt=""></img> */}
                 <p>Spacegram</p>
               </div>
             </div>

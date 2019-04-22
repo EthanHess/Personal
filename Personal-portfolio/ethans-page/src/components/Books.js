@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
+import './Books.css';
+import SACover from '..//Images/SACover.png';
 
 export default class Books extends Component {
     constructor() {
@@ -14,7 +16,10 @@ export default class Books extends Component {
     render() {
         //Could use ID instead of class name if not going to reuse
         return (
-            <div>
+            <div id="book_parent">
+                <div className="book_container_top">
+                    <img src={SACover}/> 
+                </div>
             </div>
         )
     }

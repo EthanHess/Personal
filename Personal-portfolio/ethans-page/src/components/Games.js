@@ -85,6 +85,9 @@ export default class Games extends Component {
                         { children }
                     </Slider>
                 </div>
+                <div className="animation_container_three">
+                    {/* TODO fill in with dropping cubes animation */}
+                </div>
             </div>
         )
     }

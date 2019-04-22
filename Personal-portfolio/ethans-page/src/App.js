@@ -48,7 +48,7 @@ class App extends Component {
               { this.state.isToggled === true ? <Animate play {...props} className="toggle_container">
                 <button>About</button>
                 <button onClick={()=> this.props.history.push('/acting')}>Acting / Modeling</button>
-                <button>Books</button>
+                <button onClick={()=> this.props.history.push('/books')}>Books</button>
                 <button onClick={()=> this.props.history.push('/games')}>Games</button>
               </Animate> : <div></div> }
               {/* <ul>
