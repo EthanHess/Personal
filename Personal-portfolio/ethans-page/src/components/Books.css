@@ -1,0 +1,24 @@
+.book_container_top {
+    height: 150vh;
+    width: 100vw;
+    display: flex; 
+    flex-direction: column; 
+    background: url('..//Images/milkyway.jpg'); 
+    background-size: 100% 100%; 
+}
+
+.book_container_top > img {
+    max-width: 50%; 
+    max-height: 80%; 
+    box-shadow: 0 0 5px rgb(127, 189, 214);
+    border-radius: 5px; 
+    margin: auto; 
+}
+
+#book_parent {
+    height: 150vh;
+    width: 10vw;
+    background: rgb(6, 6, 78); 
+    display: flex; 
+    flex-direction: column; 
+}
