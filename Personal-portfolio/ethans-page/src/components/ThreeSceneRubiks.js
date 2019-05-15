@@ -39,13 +39,13 @@ class ThreeSceneRubiks extends Component {
       
             //Colors
             colorCodes: {
-                R: 0xFF0000,
-                G: 0x008000,
-                Y: 0xFFFF00,
-                O: 0xFFA500,
-                B: 0x0000FF,
-                W: 0xffffff,
-                P: 0xFFC0CB,
+                R: 0x3D8FDC,
+                G: 0x333399,
+                Y: 0x7FFF8E,
+                O: 0x038FF9,
+                B: 0xCAE602,
+                W: 0xCCFFFF,
+                P: 0x45C4D9,
                 Pu: 0x9400D3,
                 Ru: 0xA55D35,
                 inside: 0xFFFFFF
@@ -276,7 +276,7 @@ class ThreeSceneRubiks extends Component {
             rubiksArray: newState, 
           }, () => {
             this.handleRenderCubeColorPositions();
-            setTimeout(() => { this.makeItParty() }, 50);
+            setTimeout(() => { this.makeItParty() }, 100);
           });
         //}
       }

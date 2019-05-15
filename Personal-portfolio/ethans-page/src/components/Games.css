@@ -2,6 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 /* @import '../../scss/variables'; */
 
+
 #game_parent {
     height: 250%;
     width: 100%; 
@@ -35,6 +36,19 @@
 }
 
 .animation_container_two {
+    width: 80%; 
+    height: 50%;
+    margin-top: 50px;
+    margin-left: 10%; 
+    margin-bottom: 0px; 
+    margin: auto; 
+    background: #0E131B;
+    border-radius: 10px; 
+    z-index: 10px;
+    box-shadow: 0 0 5px rgb(127, 189, 214);
+}
+
+.animation_container_three {
     width: 80%; 
     height: 50%;
     margin-top: 50px;
