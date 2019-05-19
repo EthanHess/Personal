@@ -2,6 +2,24 @@
 @import "~slick-carousel/slick/slick-theme.css";
 /* @import '../../scss/variables'; */
 
+/* .main_body {
+    background: black; 
+    margin-bottom: 0px; 
+} */
+
+#animation_container_main {
+    background: transparent; 
+    position: absolute; 
+    width: 90%; 
+    height: 180%; 
+    border-radius: 20px; 
+    box-shadow: 0 0 10px rgb(127, 189, 214);
+    margin-left: 5%; 
+    margin-top: 5%; 
+    margin-bottom: 5%; 
+}
+
+/* TODO --- add super parent ---  */
 
 #game_parent {
     height: 250%;
@@ -9,6 +27,7 @@
     display: flex; 
     flex-direction: column; 
     /* justify-content: center;  */
+    margin-top: 100px; 
     margin-bottom: 0px; 
     margin: auto; 
     background: black; 
@@ -40,25 +59,44 @@
     height: 50%;
     margin-top: 50px;
     margin-left: 10%; 
-    margin-bottom: 0px; 
+    margin-bottom: 10px; 
     margin: auto; 
+    padding-bottom: 10px; 
     background: #0E131B;
     border-radius: 10px; 
     z-index: 10px;
     box-shadow: 0 0 5px rgb(127, 189, 214);
 }
 
+#three_crazy_container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    margin: auto; 
+}
+
+#three_crazy_container > div > canvas {
+    margin: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 0 5px rgb(127, 189, 214);
+    display: flex; 
+    justify-content: center; 
+}
+
 .animation_container_three {
     width: 80%; 
-    height: 50%;
-    margin-top: 50px;
+    height: 1000px;
+    margin-top: 100px;
     margin-left: 10%; 
-    margin-bottom: 0px; 
+    margin-bottom: 100px; 
     margin: auto; 
     background: #0E131B;
     border-radius: 10px; 
     z-index: 10px;
     box-shadow: 0 0 5px rgb(127, 189, 214);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
 }
 
 .slick_slider {

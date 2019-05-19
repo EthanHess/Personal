@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import ThreeScene from './ThreeScene.js'; 
-import ThreeSceneRubiks from './ThreeSceneRubiks.js'
+import ThreeCrazyAnimation from './ThreeCrazyAnimation.js'; 
+import ThreeSceneRubiks from './ThreeSceneRubiks.js'; 
 import './Games.css'; 
 import Slider from 'react-slick';
 //TODO add TweenLite
 import axios from 'axios'; 
+import * as THREE from 'three'; //We'll subclass, remove this from here?
 
-//Images
+//Images (TEST FOR NOW)
 import imageOne from '..//GameImages/gameOne_1.png'; 
 import imageTwo from '..//GameImages/gameOne_2.png'; 
 import imageThree from '..//GameImages/gameOne_3.png'; 
@@ -206,18 +208,21 @@ export default class Games extends Component {
 
         //Could use ID instead of class name if not going to reuse
         return (
-            <div id="game_parent">
+            <div id="super_parent">
+                <div id="animation_container_main">
+                    <div ref={div => this.animationBoxOne = div} />
+                    <div ref={div => this.animationBoxTwo = div} />
+                    <div ref={div => this.animationBoxThree = div} />
+                    <div ref={div => this.animationBoxFour = div} />
+                    <div ref={div => this.animationBoxFive = div} />
+                    <div ref={div => this.animationBoxSix = div} />
+                    <div ref={div => this.animationBoxSeven = div} />
+                    <div ref={div => this.animationBoxEight = div} />
+                    <div ref={div => this.animationBoxNine = div} />
+                </div>  
+                <div id="game_parent">
                 {/* <ThreeScene/>  */}
                 <ThreeSceneRubiks />
-                <div ref={div => this.animationBoxOne = div} />
-                <div ref={div => this.animationBoxTwo = div} />
-                <div ref={div => this.animationBoxThree = div} />
-                <div ref={div => this.animationBoxFour = div} />
-                <div ref={div => this.animationBoxFive = div} />
-                <div ref={div => this.animationBoxSix = div} />
-                <div ref={div => this.animationBoxSeven = div} />
-                <div ref={div => this.animationBoxEight = div} />
-                <div ref={div => this.animationBoxNine = div} />
                 <div className="animation_container_two">
                     <Slider className="slick_slider" {...settings}>
                         { children }
@@ -226,8 +231,12 @@ export default class Games extends Component {
                 {/* toxicFork/react-three-renderer-example */}
                 <div className="animation_container_three">
                     {/* TODO fill in with dropping cubes animation */}
-
+                    {/* <ThreeScene /> */}
+                    <div id="three_crazy_container">
+                        <ThreeCrazyAnimation id="three_crazy_child"/> 
+                    </div>
                 </div>
+            </div>
             </div>
         )
     }
