@@ -47,6 +47,7 @@ class App extends Component {
               <button onClick={() => this.toggleMenuHandler()}>~$ Explore</button>
               { this.state.isToggled === true ? <Animate play {...props} className="toggle_container">
                 <button>About</button>
+                <button onClick={()=> this.props.history.push('/clientPortal')}>Client Portal</button>
                 <button onClick={()=> this.props.history.push('/acting')}>Acting / Modeling</button>
                 <button onClick={()=> this.props.history.push('/books')}>Books</button>
                 <button onClick={()=> this.props.history.push('/games')}>Games</button>

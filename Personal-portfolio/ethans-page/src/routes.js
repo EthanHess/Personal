@@ -10,6 +10,7 @@ import Books from './components/Books.js';
 import Games from './components/Games.js'; 
 import Login from './components/Login.js'; 
 import Payments from './components/Payments.js'; 
+import ClientPortal from './components/ClientPortal.js'; 
 
 export default (
     <Switch>
@@ -19,5 +20,6 @@ export default (
         <Route component={Games} path="/games"/>
         <Route component={Books} path="/books"/>
         <Route component={Payments} path="/payments"/>
+        <Route component={ClientPortal} path="/clientPortal"/>
     </Switch>
 )
