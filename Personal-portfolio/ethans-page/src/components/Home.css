@@ -63,6 +63,22 @@
   .back > button:hover {
     background: rgb(70, 70, 206); 
   }
+
+  /* End main intro div flip functionality */
+
+  /* Begin individual div flip, TODO give reusable ID with # and not class */
+
+  .container_first_one:hover, .container_first_two:hover, .container_first_three:hover, .container_first_four:hover {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg); 
+    background: transparent; 
+    position: relative;
+    perspective: 1000px; 
+  }
+
+
+  /* End individual div flip */
   
   .intro_container > p {
     height: 30px;

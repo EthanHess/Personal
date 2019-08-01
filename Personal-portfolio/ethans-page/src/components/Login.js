@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
 import './Login.css'; 
+import { loginUser } from '../ducks/reducer'
+import { connect } from 'react-redux'
 
 import theUser from '..//Images/female_user.png'; 
 
-export default class Login extends Component {
+class Login extends Component {
     constructor() {
         super()
         //TODO add props
@@ -19,10 +21,19 @@ export default class Login extends Component {
         console.log('--- LOGIN COMPONENT MOUNTED ---')
     }
 
+    //TODO geocode address for location? (react-geocode)
+
     handleLogin = () => {
         const { email, password } = this.state
         if (email !== '' && password !== '') {
-
+            axios.post('api/auth/login', {}).then(response => {
+                if (response.data.message === 'Username and Password do not match' || response.data.message === 'Username Does Not Exist. Please Click Register To Create an Account.') {
+                    alert(response.data.message)
+                } else {
+                    this.props.loginUser(response.data)
+                    this.props.history.push('/')
+                }
+            })
         } else {
             alert('Please enter login credentials')
         }
@@ -31,7 +42,14 @@ export default class Login extends Component {
     handleSignUp = () => {
         const { username, email, password } = this.state
         if (email !== '' && password !== '' && username !== '') {
-
+            axios.post('api/auth/signup', {username: username, email: email, password: password}).then(response => {
+                if (response.data.message === "Username is unavailable") {
+                    alert(response.data.message)
+                } else {
+                    this.props.loginUser(response.data)
+                    this.props.history.push('/')
+                }
+            })
         } else {
             alert('Please enter sing up credentials')
         }
@@ -71,3 +89,12 @@ export default class Login extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    const { user } = state
+    return {
+        user
+    }
+ }
+
+export default connect(mapStateToProps, {loginUser} )(Login)
