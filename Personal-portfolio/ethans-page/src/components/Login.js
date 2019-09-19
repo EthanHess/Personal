@@ -19,6 +19,9 @@ class Login extends Component {
 
     componentDidMount() {
         console.log('--- LOGIN COMPONENT MOUNTED ---')
+        
+        //TEST
+        setTimeout(this.authZeroHandler, 2000)
     }
 
     //TODO geocode address for location? (react-geocode)
@@ -53,6 +56,12 @@ class Login extends Component {
         } else {
             alert('Please enter sing up credentials')
         }
+    }
+
+    authZeroHandler = () => {
+        const redirectUri = encodeURIComponent(`${window.location.origin}/auth/callback`);
+        console.log('--- DOMAIN ---', process.env.REACT_APP_PROJECT_PORTAL_AUTH0_DOMAIN)
+        window.location = `https://${process.env.REACT_APP_PROJECT_PORTAL_AUTH0_DOMAIN}/authorize?client_id=${process.env.REACT_APP_PROJECT_PORTAL_AUTH0_CLIENT_ID}&scope=openid%20profile%20email&redirect_uri=${redirectUri}&response_type=code`
     }
 
     monitorTextChangeUsername = (e) => {
