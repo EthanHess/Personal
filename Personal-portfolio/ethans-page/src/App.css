@@ -69,7 +69,8 @@
 .left_nav_items > ul > li > img {
   max-width: 60px;
   max-height: 60px; 
-  margin-left: -50%;  
+  /* margin-left: -50%;   */
+  margin-left: 10px; 
 }
 
 .left_nav_items > ul > li > button {
@@ -84,6 +85,7 @@
   font-family: 'Courier New', Courier, monospace; 
   font-weight: bold; 
   font-size: 12px; 
+  margin-right: 50px; 
 }
 
 .left_nav_items > ul > li > button:hover {
@@ -96,6 +98,7 @@
   max-height: 70px; 
   margin: auto; 
   margin-top: 15px; 
+  margin-left: 15px; 
   box-shadow: 2px 2px 2px 2px rgb(127, 189, 214);
   border-radius: 35px; 
   cursor: pointer;

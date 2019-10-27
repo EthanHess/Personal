@@ -9,8 +9,12 @@ import { Animate, AnimateKeyframes, AnimateGroup } from 'react-simple-animate';
 import theUser from './Images/female_user.png'; 
 import homeImage from './Images/blue_circle.png';
 
+import earthPic from './Images/earth.png'; 
+import spacePic from './Images/nature.png'; 
 
 //Add web + video game portfolio in this route, then add other routes for commercials, books etc. 
+
+//TODO be able to update theme of website, we'll have Space (dark) and Nature (light)
 
 class App extends Component {
   constructor() { //TD add props
@@ -25,6 +29,10 @@ class App extends Component {
     console.log('this.state.isToggled', this.state.isToggled)
   }
 
+  toggleThemeHandler = () => {
+
+  }
+
   //Move this to own component
   render() {
 
@@ -33,10 +41,15 @@ class App extends Component {
       endStyle: { opacity: 1 }
     }
 
+    //TODO add Blog + Control Panel
+
     return (
       <div className="App">
         <div className="header_class">
             <img onClick={() => this.props.history.push('/')} src={homeImage}/>
+            {/* //TEST move somewhere else eventually, this will control theme of webpage */}
+            <img onClick={() => this.toggleThemeHandler()} src={earthPic}/>
+            {/* END TEST */}
             <div className="left_nav_items">  
               <ul>
                 <li><img src={ theUser }/></li>
