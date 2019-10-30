@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
     user: {}, 
+    theme: "SPACE"
 }
 
 const LOGIN_USER = "LOGIN_USER"; 
@@ -17,9 +18,9 @@ export default function reducer(state = INITIAL_STATE, action) {
             return Object.assign({}, state, {user: {}}); 
         //Theme
         case SPACE_THEME:
-            return Object.assign({}, state, {"THEME": action.payload}); 
+            return Object.assign({}, state, {theme: action.payload}); 
         case NATURE_THEME:
-            return Object.assign({}, state, {"THEME": action.payload}); 
+            return Object.assign({}, state, {theme: action.payload}); 
         default: 
             return state; 
     }
@@ -39,17 +40,17 @@ export function logoutUser() {
     }
 }
 
-//Nature/Space
-export function spaceTheme() {
+//Nature/Space UI Theme
+export function spaceTheme(theme) {
     return {
         type: SPACE_THEME, 
-        payload: "SPACE"
+        payload: theme
     }
 }
 
-export function natureTheme() {
+export function natureTheme(theme) {
     return {
         type: NATURE_THEME, 
-        payload: "NATURE"
+        payload: theme
     }
 }

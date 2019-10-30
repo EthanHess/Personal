@@ -5,12 +5,16 @@ import routes from './routes.js';
 import { Animate, AnimateKeyframes, AnimateGroup } from 'react-simple-animate';
 
 //Icons (maybe group in divs by four?)
-
 import theUser from './Images/female_user.png'; 
 import homeImage from './Images/blue_circle.png';
 
-import earthPic from './Images/earth.png'; 
-import spacePic from './Images/nature.png'; 
+//UI Theme
+import earthPic from './Images/earth.png'; //For space
+import naturePic from './Images/nature.png'; 
+
+//Redux
+import { spaceTheme, natureTheme } from './ducks/reducer'
+import { connect } from 'react-redux'
 
 //Add web + video game portfolio in this route, then add other routes for commercials, books etc. 
 
@@ -20,8 +24,13 @@ class App extends Component {
   constructor() { //TD add props
     super()
     this.state = {
-      isToggled: false
+      isToggled: false, 
+      theme: "SPACE"
     }
+  }
+
+  determineScheme = () => {
+
   }
 
   toggleMenuHandler = () => {
@@ -30,7 +39,8 @@ class App extends Component {
   }
 
   toggleThemeHandler = () => {
-
+    const { theme } = this.state
+    this.setState({ theme: theme === "SPACE" ? "NATURE" : "SPACE" })
   }
 
   //Move this to own component
@@ -41,6 +51,9 @@ class App extends Component {
       endStyle: { opacity: 1 }
     }
 
+    const { theme } = this.state
+    console.log("THEME", theme)
+
     //TODO add Blog + Control Panel
 
     return (
@@ -48,7 +61,7 @@ class App extends Component {
         <div className="header_class">
             <img onClick={() => this.props.history.push('/')} src={homeImage}/>
             {/* //TEST move somewhere else eventually, this will control theme of webpage */}
-            <img onClick={() => this.toggleThemeHandler()} src={earthPic}/>
+            <img onClick={() => this.toggleThemeHandler()} src={theme === "SPACE" ? earthPic : naturePic}/>
             {/* END TEST */}
             <div className="left_nav_items">  
               <ul>
@@ -87,5 +100,9 @@ class App extends Component {
   }
 }
 
-//TODO add redux
-export default withRouter(App);
+const mapStateToProps = (state) => {
+  const { theme } = state
+  return { theme }
+}
+
+export default withRouter(connect(mapStateToProps, { natureTheme, spaceTheme })(App));
