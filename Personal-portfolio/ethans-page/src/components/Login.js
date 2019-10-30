@@ -21,7 +21,7 @@ class Login extends Component {
         console.log('--- LOGIN COMPONENT MOUNTED ---')
         
         //TEST
-        setTimeout(this.authZeroHandler, 2000)
+        //setTimeout(this.authZeroHandler, 2000)
     }
 
     //TODO geocode address for location? (react-geocode)

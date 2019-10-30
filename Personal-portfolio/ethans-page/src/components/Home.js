@@ -21,10 +21,32 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import Typing from 'react-typing-animation';
 
+//Redux 
+import { spaceTheme, natureTheme } from '../ducks/reducer'
+import { connect } from 'react-redux'
+
 class Home extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         //TODO add props
+        this.state = {
+          theme: "SPACE"
+        }
+    }
+
+    //On load
+    componentDidMount() { 
+
+    }
+
+    //State change (these will be deprecated soon, update)
+    componentWillUpdate() {
+      console.log("--- HOME.js hit ---", this.props, this.state)
+      //Props working correctly from Redux but state needs to be updated
+    }
+
+    componentDidUpdate() {
+
     }
 
     render() {
@@ -134,4 +156,12 @@ class Home extends Component {
     }
 }
 
-export default withRouter(Home)
+const mapStateToProps = (state) => {
+  const { theme } = state
+  return { theme }
+}
+
+export default withRouter(connect(mapStateToProps, {natureTheme, spaceTheme})(Home)); 
+
+//export default withRouter(Home)
+//export default withRouter(connect(mapStateToProps, { natureTheme, spaceTheme })(App));

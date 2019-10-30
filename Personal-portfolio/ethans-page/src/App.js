@@ -29,7 +29,7 @@ class App extends Component {
     }
   }
 
-  determineScheme = () => {
+  determineTheme = () => {
 
   }
 
@@ -40,11 +40,21 @@ class App extends Component {
 
   toggleThemeHandler = () => {
     const { theme } = this.state
-    this.setState({ theme: theme === "SPACE" ? "NATURE" : "SPACE" })
+    this.setState({ theme: theme === "SPACE" ? "NATURE" : "SPACE" }, () => { //Set the state then update after
+      this.updateOtherComponents()
+    })
+  }
+
+  updateOtherComponents = () => {
+    const { theme } = this.state
+    theme === "SPACE" ? this.props.spaceTheme("SPACE") : this.props.natureTheme("NATURE")
   }
 
   //Move this to own component
   render() {
+
+    //Nature theme = white top bar
+    //Space = dark blue
 
     const props = {
       startStyle: { opacity: 0 },
@@ -104,5 +114,7 @@ const mapStateToProps = (state) => {
   const { theme } = state
   return { theme }
 }
+
+//mapDispatchToProps necessary?
 
 export default withRouter(connect(mapStateToProps, { natureTheme, spaceTheme })(App));
