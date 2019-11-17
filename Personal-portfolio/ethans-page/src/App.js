@@ -68,7 +68,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="header_class">
+        <div className="header_class" style={{backgroundColor: theme === "NATURE" ? `white` : `rgb(10, 2, 51)`}} >
             <img onClick={() => this.props.history.push('/')} src={homeImage}/>
             {/* //TEST move somewhere else eventually, this will control theme of webpage */}
             <img onClick={() => this.toggleThemeHandler()} src={theme === "SPACE" ? earthPic : naturePic}/>

@@ -21,6 +21,9 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import Typing from 'react-typing-animation';
 
+import spacePicForBackground from '..//Images/earthsunrise.jpg'; 
+import naturePicForBackground from '..//Images/natureMainBackground.jpg'; 
+
 //Redux 
 import { spaceTheme, natureTheme } from '../ducks/reducer'
 import { connect } from 'react-redux'
@@ -64,6 +67,19 @@ class Home extends Component {
         //Could use ID instead of class name if not going to reuse
         const { theme } = this.state
         console.log("THEME HOME JS RENDER", theme)
+
+        //PASS BG to CSS
+
+        //const natureURL = '..//Images/natureMainBackground.jpg'
+        //const spaceURL = '..//Images/earthsunrise.jpg'
+        // style={{backgroundImage: theme === "NATURE" ? `url("${natureURL}")` : `url("${spaceURL}")`}}
+        // const BG = theme === "NATURE" ? naturePicForBackground : spacePicForBackground
+        // const BG = theme === "NATURE" ? natureURL : spaceURL
+        //const BG = theme === "NATURE" ? `url("${natureURL}")` : `url("${spaceURL}")`
+        //style={{backgroundImage: BG}
+
+        //console.log('BG', BG)
+
         return (
             <div>
             <div className="intro_container">
@@ -78,7 +94,7 @@ class Home extends Component {
             </div>
             <Typing className="type_header_top"> Ethan Hess </Typing>
             <p>Software Developer (iOS and Web) in San Francisco, CA</p>
-            <p>Also traveller of the world, novelist, game designer, actor, model and some other things</p>
+            <p>Also traveler of the world, novelist, game designer, actor, model and some other things</p>
           </div>
 
           <div className="ios_work_container">
