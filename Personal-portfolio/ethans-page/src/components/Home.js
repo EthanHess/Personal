@@ -45,12 +45,25 @@ class Home extends Component {
       //Props working correctly from Redux but state needs to be updated
     }
 
+    //Cannot set state in "will update" due to infinite loop, this is the correct place to do so
+    componentWillReceiveProps() {
+      const { theme } = this.props
+      console.log("--- HOME js nature/space value fetched", this.props["theme"], theme) //These do the same thing
+      this.stateSetWrapperFromUpdateComponent(theme)
+    }
+
+    stateSetWrapperFromUpdateComponent = (val) => {
+        this.setState({ theme: val })
+    }
+
     componentDidUpdate() {
 
     }
 
     render() {
         //Could use ID instead of class name if not going to reuse
+        const { theme } = this.state
+        console.log("THEME HOME JS RENDER", theme)
         return (
             <div>
             <div className="intro_container">

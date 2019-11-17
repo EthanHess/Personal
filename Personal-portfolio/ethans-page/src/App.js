@@ -62,7 +62,7 @@ class App extends Component {
     }
 
     const { theme } = this.state
-    console.log("THEME", theme)
+    console.log("THEME APP JS RENDER", theme)
 
     //TODO add Blog + Control Panel
 
