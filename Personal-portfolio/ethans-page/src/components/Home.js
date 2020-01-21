@@ -24,6 +24,9 @@ import Typing from 'react-typing-animation';
 import spacePicForBackground from '..//Images/earthsunrise.jpg'; 
 import naturePicForBackground from '..//Images/natureMainBackground.jpg'; 
 
+import emailPic from '..//Images/emailIcon.png'; 
+import phonePic from '..//Images/phoneIcon.png'; 
+
 //Redux 
 import { spaceTheme, natureTheme } from '../ducks/reducer'
 import { connect } from 'react-redux'
@@ -64,21 +67,26 @@ class Home extends Component {
     }
 
     render() {
+
+      //NOTE theme gets updated incorrectly, check this
+
         //Could use ID instead of class name if not going to reuse
         const { theme } = this.state
         console.log("THEME HOME JS RENDER", theme)
 
         //PASS BG to CSS
 
-        //const natureURL = '..//Images/natureMainBackground.jpg'
-        //const spaceURL = '..//Images/earthsunrise.jpg'
+        const natureURL = '..//Images/natureMainBackground.jpg'
+        const spaceURL = '..//Images/earthsunrise.jpg'
         // style={{backgroundImage: theme === "NATURE" ? `url("${natureURL}")` : `url("${spaceURL}")`}}
-        // const BG = theme === "NATURE" ? naturePicForBackground : spacePicForBackground
+        const BG = theme === "NATURE" ? naturePicForBackground : spacePicForBackground
         // const BG = theme === "NATURE" ? natureURL : spaceURL
-        //const BG = theme === "NATURE" ? `url("${natureURL}")` : `url("${spaceURL}")`
-        //style={{backgroundImage: BG}
+        // const BG = theme === "NATURE" ? `url('${natureURL}')` : `url('${spaceURL}')`
+        //style={{backgroundImage: BG}}
 
-        //console.log('BG', BG)
+        //'url('+ imgUrl + ')'
+
+        console.log('BG + THEME', BG, theme)
 
         return (
             <div>
@@ -96,7 +104,7 @@ class Home extends Component {
             <p>Software Developer (iOS and Web) in San Francisco, CA</p>
             <p>Also traveler of the world, novelist, game designer, actor, model and some other things</p>
           </div>
-
+{/* style={{backgroundColor: theme === "NATURE" ? `white` : `rgb(10, 2, 51)`}} */}
           <div className="ios_work_container">
             <p>iOS Client Work</p>
           </div>
@@ -177,7 +185,24 @@ class Home extends Component {
           </div>
           <div className="footer_view">
             <div id="footer_oval">
-            
+              {/* Add hours?  */}
+                <div id="title_container">
+                    <p>Serving Silicon Valley Since 2015</p>
+                    <p>Questions? Comments?</p>
+                    <p>Hours: 9 a.m. - 5 p.m. Pacific Time</p>
+                </div>
+                <div id="contact_container">
+                  <div id="phone_container">
+                      <img src={phonePic} alt=""></img>
+                      <p>610-715-4335</p>
+                  </div>
+                  <div id="email_container">
+                  {/* Add new address + phone, not personal? */}
+                      <img src={emailPic} alt=""></img>
+                      <p>ech1988@gmail.com</p>
+                  </div>
+                </div>
+                
             </div>
           </div>
         </div>
