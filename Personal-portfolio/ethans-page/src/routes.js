@@ -11,6 +11,7 @@ import Games from './components/Games.js';
 import Login from './components/Login.js'; 
 import Payments from './components/Payments.js'; 
 import ClientPortal from './components/ClientPortal.js'; 
+import About from './components/About.js';
 
 export default (
     <Switch>
@@ -21,5 +22,6 @@ export default (
         <Route component={Books} path="/books"/>
         <Route component={Payments} path="/payments"/>
         <Route component={ClientPortal} path="/clientPortal"/>
+        <Route component={About} path="/about"/>
     </Switch>
 )

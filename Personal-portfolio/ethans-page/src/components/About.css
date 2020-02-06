@@ -1,0 +1,11 @@
+#about_parent {
+    height: 200%; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: row; 
+    background: url('..//Images/coolSaturnPic.jpg'); 
+    background-position: center;
+    background-size: cover;
+}
+
+/* //TODO update BG image */

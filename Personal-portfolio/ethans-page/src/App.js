@@ -81,8 +81,9 @@ class App extends Component {
             </div>
             <div className="right_nav_items">
               <button onClick={() => this.toggleMenuHandler()}>~$ Explore</button>
+              {/* //TODO subclass toggle container */}
               { this.state.isToggled === true ? <Animate play {...props} className="toggle_container">
-                <button>About</button>
+                <button onClick={()=> this.props.history.push('/about')}>About</button>
                 <button onClick={()=> this.props.history.push('/clientPortal')}>Client Portal</button>
                 <button onClick={()=> this.props.history.push('/acting')}>Acting / Modeling</button>
                 <button onClick={()=> this.props.history.push('/books')}>Books</button>
