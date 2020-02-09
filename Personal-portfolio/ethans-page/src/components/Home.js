@@ -131,6 +131,7 @@ class Home extends Component {
           <div className="ios_personal_container">
             <p>iOS Personal Work ~$ For Fun</p>
           </div>
+          <div className="second_third_tabs_parent">
           <div className="second_tabs">
             <div className="container_first_personal_one">
               <img src={Cosmologist} alt=""></img>
@@ -166,6 +167,7 @@ class Home extends Component {
               <img src={GramminIcon} alt=""></img>
               <p>Grammin</p>
             </div>
+          </div>
           </div>
           <div className="web_personal_container">
             <p>Web Personal Work ~$ For Fun</p>

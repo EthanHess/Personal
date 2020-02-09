@@ -325,7 +325,7 @@
   justify-content: space-evenly; 
 }
 
-.container_first_one, .container_first_two, .container_first_three, .container_first_four, {
+.container_first_one, .container_first_two, .container_first_three, .container_first_four {
   width: 200px; 
   height: 250px; 
   display: flex; 

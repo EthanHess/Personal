@@ -112,29 +112,37 @@
     /* justify-content: space-evenly; 
     margin: auto;  */
   }
+ 
+  .second_third_tabs_parent {
+    background: url('..//Images/starsBlue.jpg'); 
+    height: 100vh;
+    width: 100vw; 
+    /* background: rgb(26, 24, 112); */
+    display: flex;
+    flex-direction: column; 
+    background-size: auto;
+  }
   
   .second_tabs {
     height: 100vh;
     width: 100vw; 
-    background: rgb(26, 24, 112); 
     display: flex;
     flex-direction: row; 
-    background: url('..//Images/starsOne.jpg'); 
+    background-color: transparent;
   }
   
   .third_tabs {
     height: 100vh;
     width: 100vw; 
-    background: rgb(39, 38, 114);
     display: flex;
     flex-direction: row;  
-    background: url('..//Images/starsOne.jpg'); 
+    background-color: transparent;
   }
   
   .web_parent_container {
     height: 60vh;
     width: 100vw; 
-    background: rgb(39, 38, 114);
+    /* background: rgb(39, 38, 114); */
     display: flex;
     flex-direction: row;  
     background: url('..//Images/starsOne.jpg'); 
@@ -182,13 +190,14 @@
     font-weight: bold; 
     text-align: center; 
     width: 200px; 
+    margin: auto;
   }
   
   .container_first_one > img, .container_first_two > img, .container_first_three > img, .container_first_four > img {
     width: 200px; 
     height: 200px; 
     border-radius: 10px; 
-    margin-top: 50px; 
+    margin-top: 0px; 
   }
   
   /* .container_second_one > img {
@@ -212,7 +221,7 @@
   
   .container_first_personal_one, .container_first_personal_two, .container_first_personal_three, .container_first_personal_four {
     width: 200px; 
-    height: 80%; 
+    height: 70%; 
     display: flex; 
     flex-direction: column; 
     margin: auto;
@@ -224,7 +233,7 @@
   
   .container_second_personal_one, .container_second_personal_two, .container_second_personal_three, .container_second_personal_four  {
     width: 200px; 
-    height: 80%; 
+    height: 70%; 
     display: flex; 
     flex-direction: column; 
     margin: auto;
@@ -339,4 +348,15 @@
     font-weight: bold; 
     text-align: center; 
     width: 200px; 
+  }
+
+  /* For personal hover */
+
+  .container_first_personal_one:hover, .container_first_personal_two:hover, .container_first_personal_three:hover, .container_first_personal_four:hover, .container_second_personal_one:hover, .container_second_personal_two:hover, .container_second_personal_three:hover, .container_second_personal_four:hover,   .web_container_third_personal_one:hover, .web_container_third_personal_two:hover, .web_container_third_personal_three:hover {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg); 
+    background: transparent; 
+    position: relative;
+    perspective: 1000px; 
   }
