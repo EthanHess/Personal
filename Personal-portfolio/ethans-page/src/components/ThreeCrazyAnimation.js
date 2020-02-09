@@ -3,7 +3,7 @@ import * as THREE from 'three';
 
 import myImage from '..//Images/galaxyOne.jpg'; 
 import myImageMW from '..//Images/milkyway.jpg'; 
-import myBackground from '..//Images/starsOne.jpg'; 
+import myBackground from '..//Images/starsTwo.jpg'; 
 
 class ThreeCrazyAnimation extends Component {
     componentDidMount() {

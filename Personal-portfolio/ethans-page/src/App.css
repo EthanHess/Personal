@@ -281,7 +281,7 @@
   background: rgb(26, 24, 112); 
   display: flex;
   flex-direction: row; 
-  background: url('Images/starsOne.jpg'); 
+  /* background: url('Images/starsOne.jpg');  */
 }
 
 .third_tabs {
@@ -290,7 +290,7 @@
   background: rgb(39, 38, 114);
   display: flex;
   flex-direction: row;  
-  background: url('Images/starsOne.jpg'); 
+  /* background: url('Images/starsOne.jpg');  */
 }
 
 .web_parent_container {
@@ -299,7 +299,7 @@
   background: rgb(39, 38, 114);
   display: flex;
   flex-direction: row;  
-  background: url('Images/starsOne.jpg'); 
+  /* background: url('Images/starsOne.jpg');  */
   color: white; 
 }
 
