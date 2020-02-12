@@ -75,8 +75,31 @@
     background: transparent; 
     position: relative;
     perspective: 1000px; 
+    z-index: 2;
+    backface-visibility: hidden;
   }
 
+  .container_first_one_back, .container_first_two_back, .container_first_three_back, .container_first_four_back {
+    width: 200px; 
+    height: 70%; 
+    transform: rotateY(180deg);
+    overflow: hidden;
+    background: black; 
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    box-shadow: 5px 5px 5px 5px rgb(193, 190, 228);
+    border-radius: 10px;
+  }
+
+  .container_first_one_back > p, .container_first_two_back > p, .container_first_three_back > p, .container_first_four_back > p {
+    color: white;
+    font-size: 12;
+    margin: auto;
+    background: black;
+  }
+  
 
   /* End individual div flip */
   

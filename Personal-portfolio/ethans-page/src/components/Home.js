@@ -137,17 +137,29 @@ class Home extends Component {
               <img src={Cosmologist} alt=""></img>
               <p>Cosmologist</p>
             </div>
+            <div className="container_first_personal_one_back">
+              <p>Cosmologist is an app which fetches NASA's image or video of the day. You can save albums and also track the international Space Station</p>
+            </div>
             <div className="container_first_personal_two">
               <img src={Fastronaut} alt=""></img>
               <p>Fastronaut</p>
+            </div>
+            <div className="container_first_personal_one_back">
+              <p>Fastronaut is a vintage style video game with 30 challenging and exciting levels!</p>
             </div>
             <div className="container_first_personal_three">
               <img src={Choreganizer} alt=""></img>
               <p>Choreganizer</p>
             </div>
+            <div className="container_first_personal_one_back">
+              <p>Choreganizer is a To-do list app with speech functionality</p>
+            </div>
             <div className="container_first_personal_four">
               <img src={Snapption} alt=""></img>
               <p>Snapption</p>
+            </div>
+            <div className="container_first_personal_one_back">
+              <p>Snapption is a travel tracker with share functionality</p>
             </div>
           </div>
           <div className="third_tabs">
