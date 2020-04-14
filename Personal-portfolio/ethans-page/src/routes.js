@@ -10,6 +10,8 @@ import Books from './components/Books.js';
 import Games from './components/Games.js'; 
 import Login from './components/Login.js'; 
 import Payments from './components/Payments.js'; 
+import Projects from './components/Projects.js'; 
+import ChatLobby from './components/ChatLobby.js'; 
 import ClientPortal from './components/ClientPortal.js'; 
 import About from './components/About.js';
 
@@ -21,6 +23,8 @@ export default (
         <Route component={Games} path="/games"/>
         <Route component={Books} path="/books"/>
         <Route component={Payments} path="/payments"/>
+        <Route component={Projects} path="/projects"/>
+        <Route component={ChatLobby} path="/chatLobby"/>
         <Route component={ClientPortal} path="/clientPortal"/>
         <Route component={About} path="/about"/>
     </Switch>

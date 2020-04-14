@@ -27,6 +27,7 @@ class Login extends Component {
     //TODO geocode address for location? (react-geocode)
 
     handleLogin = () => {
+        console.log("Sign Up Hit")
         const { email, password } = this.state
         if (email !== '' && password !== '') {
             axios.post('api/auth/login', {}).then(response => {
@@ -43,6 +44,7 @@ class Login extends Component {
     }
      
     handleSignUp = () => {
+        console.log("Login Hit")
         const { username, email, password } = this.state
         if (email !== '' && password !== '' && username !== '') {
             axios.post('api/auth/signup', {username: username, email: email, password: password}).then(response => {
@@ -59,6 +61,7 @@ class Login extends Component {
     }
 
     authZeroHandler = () => {
+        console.log("Auth Zero Handler Hit")
         const redirectUri = encodeURIComponent(`${window.location.origin}/auth/callback`);
         console.log('--- DOMAIN ---', process.env.REACT_APP_PROJECT_PORTAL_AUTH0_DOMAIN)
         window.location = `https://${process.env.REACT_APP_PROJECT_PORTAL_AUTH0_DOMAIN}/authorize?client_id=${process.env.REACT_APP_PROJECT_PORTAL_AUTH0_CLIENT_ID}&scope=openid%20profile%20email&redirect_uri=${redirectUri}&response_type=code`
@@ -90,8 +93,9 @@ class Login extends Component {
                         <input onChange={(e) => this.monitorTextChangePassword(e)}></input>
                     </div>
                     <div className="button_container">
-                        <button onClick={() => this.handleLogin }>Login</button>
-                        <button onClick={() => this.handleLogin }>Sign Up</button>
+                        <button onClick={() => this.handleLogin() }>Login</button>
+                        <button onClick={() => this.handleLogin() }>Sign Up</button>
+                        <button onClick={() => this.authZeroHandler() }>3rd Party</button>
                     </div>
                 </div>
             </div>        

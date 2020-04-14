@@ -26,7 +26,7 @@ export default class ClientPortal extends Component {
                         <div className="right_main_container">
                             <p>Welcome back!</p> 
                             <div className="button_container">
-                                <button>Projects</button>
+                                <button onClick={() => this.props.history.push('/projects')}>Projects</button>
                                 <button>Contact Ethan</button>
                                 <button>Payments</button>
                             </div>

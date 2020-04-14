@@ -102,7 +102,7 @@ class Home extends Component {
             </div>
             <Typing className="type_header_top"> Ethan Hess </Typing>
             <p>Software Developer (iOS and Web) in San Francisco, CA</p>
-            <p>Also traveler of the world, novelist, game designer, actor, model and some other things</p>
+            <p>I also really like space in case you can't tell from the website</p>
           </div>
 {/* style={{backgroundColor: theme === "NATURE" ? `white` : `rgb(10, 2, 51)`}} */}
           <div className="ios_work_container">
