@@ -27,6 +27,9 @@ import naturePicForBackground from '..//Images/natureMainBackground.jpg';
 import emailPic from '..//Images/emailIcon.png'; 
 import phonePic from '..//Images/phoneIcon.png'; 
 
+//GSAP animations
+import { TweenLite } from "gsap/all";
+
 //Redux 
 import { spaceTheme, natureTheme } from '../ducks/reducer'
 import { connect } from 'react-redux'
@@ -34,10 +37,23 @@ import { connect } from 'react-redux'
 class Home extends Component {
     constructor(props) {
         super(props)
-        //TODO add props
         this.state = {
-          theme: "SPACE"
+          theme: "SPACE", 
+          animationViewArray: [], //Will map in render(), just have array of colors for UIView BG
+          gsapArray: [] //Animations, do we need this as an array?
         }
+
+        this.animationArrayCreate()
+    }
+
+    animationArrayCreate = () => {
+        const { animationViewArray } = this.state
+        if (animationViewArray.length == 0) {
+            for (var i = 0; i < 30; i++) {
+                animationViewArray.push(i); 
+            }
+        }
+        console.log("animations array", animationViewArray)
     }
 
     //On load

@@ -3,7 +3,7 @@
     width: 100%; 
     display: flex; 
     flex-direction: row; 
-    background: url('..//Images/coolSaturnPic.jpg'); 
+    /* background: url('..//Images/coolSaturnPic.jpg');  */
     background-position: center;
     background-size: cover;
 }
