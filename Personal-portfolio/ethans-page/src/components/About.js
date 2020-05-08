@@ -39,13 +39,22 @@ export default class About extends Component {
 
         const { animationViewArray } = this.state
 
-        animationViewArray.map((item, index) => {
-
+        const divArray = animationViewArray.map((item, index) => {
+            return <div className={'animation_' + item}>{item}</div>
         })
+
+        // const animations = divArray.map((item, index) => {
+        //     return TweenLite.to(item, 1, {x: 100, y: 100})
+        // })
+
+        // for (var i = 0; i < divArray.length; i++) {
+        //     const element = divArray[i]
+        //     TweenLite.to(element, 1, {x: 100, y: 100})
+        // }
 
         return (
             <div id="about_parent">
-
+                {divArray}
             </div>
         )
     }
